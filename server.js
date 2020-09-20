@@ -12,6 +12,7 @@ const MONGODB_URI = process.env.MONGODB_URI;
 // MIDDLEWARE
 app.use(methodOverride("_method"));
 app.use(express.urlencoded({ extended: true }));
+app.use(express.static("public"));
 app.use(
   session({
     secret: process.env.SECRET,
@@ -56,5 +57,5 @@ app.get("/", (req, res) => {
 
 // Listener
 app.listen(PORT, () => {
-  console.log("🍒🍋Listening on port🥝🍉", PORT);
+  console.log("Listening on Port: ", PORT);
 });

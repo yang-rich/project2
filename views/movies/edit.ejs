@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <%- include ('../partials/head.ejs') %>
+  </head>
+  <body>
+    <nav>
+      <%- include ('../partials/nav.ejs') %>
+    </nav>
+    <div class="container">
+      <h1>Edit Movie</h1>
+      <form action="/movies/<%=movies.id%>?_method=PUT" method="POST">
+        <label for="title">Title:</label>
+        <input type="text" name="title" required placeholder="The Bourne Identity"/>
+        <label for="cover">Cover Art:</label>
+        <!-- how do i make it check it's a valid image -->
+        <input type="text" name="cover" required placeholder="https://m.media-amazon.com/images/M/MV5BM2JkNGU0ZGMtZjVjNS00NjgyLWEyOWYtZmRmZGQyN2IxZjA2XkEyXkFqcGdeQXVyNTIzOTk5ODM@._V1_UX182_CR0,0,182,268_AL_.jpg"/>
+        <label for="synopsis">Synopsis:</label><br/>
+        <input type="textbox" name="synopsis" required /><br/>
+        <label for="rating">Rating:</label>
+        <input type="number" name="rating" required /> /10
+        <br/>
+        <br>
+        <input type="submit" value="Submit">
+      <form>
+      <button type="button" name="button">
+        <a href="/movies">Back to Main Page</a>
+      </button>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <%- include ('../partials/head.ejs') %>
+  </head>
+  <body>
+    <nav>
+      <%- include ('../partials/nav.ejs') %>
+    </nav>
+    <div class="container">
+      <h1>Add A Movie</h1>
+      <form action="/movies" method="POST">
+        <label for="title">Title:</label>
+        <input type="text" name="title" required placeholder="The Bourne Identity"/>
+        <label for="cover">Cover Art:</label>
+        <!-- how do i make it check it's a valid image -->
+        <input type="text" name="cover" required placeholder="https://upload.wikimedia.org/wikipedia/en/a/ae/BourneIdentityfilm.jpg"/>
+        <label for="synopsis">Synopsis:</label><br/>
+        <input type="textbox" name="synopsis" required /><br/>
+        <label for="rating">Rating:</label>
+        <input type="number" step="any" name="rating" required /> /10
+        <br/>
+        <br>
+        <input type="submit" value="Submit">
+      <form>
+    </div>
+  </body>
+</html>

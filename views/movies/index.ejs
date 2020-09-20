@@ -9,15 +9,19 @@
     </nav>
     <div class="container">
       <h1>Movies Index Page</h1>
-      <ul>
-        <% for (let movie of movies ) { %>
-          <li>
-            <a href="/movies/<%=movie._id%>">
-              <%= movie.title %></br>
-              <img src="<%= movie.cover %>"></a>
-          </li>
-       <% } %>
-      </ul>
+      <!-- swim lanes -->
+      <h2>On Deck</h2>
+      <!-- drag drop target area -->
+      <h2>Library</h2>
+      <div class="grid-container">
+        <% for (let i=0; i < movies.length; i++) { %>
+          <div class="box box<%=[i]%>">
+            <a href="/movies/<%=movies[i]._id%>">
+              <%= movies[i].title %></br>
+              <img src="<%= movies[i].cover %>"></a>
+          </div>
+        <% } %>
+      </div>
     </div>
   </body>
 </html>

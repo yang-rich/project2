@@ -1,0 +1,10 @@
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(5, auto);
+  grid-auto-rows: auto;
+  text-align: center;
+}
+
+.box {
+  padding: 10px;
+}
