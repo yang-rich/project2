@@ -17,8 +17,8 @@
         <% for (let i=0; i < movies.length; i++) { %>
           <div class="box box<%=[i]%>">
             <a href="/movies/<%=movies[i]._id%>">
-              <%= movies[i].title %></br>
-              <img src="<%= movies[i].cover %>"></a>
+              <div class="titles"><%= movies[i].title %></div></br>
+              <div class="posters"><img src="<%= movies[i].cover %>"></div></a>
           </div>
         <% } %>
       </div>

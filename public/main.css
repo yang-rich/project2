@@ -1,10 +1,33 @@
+body {
+  background-color: rgb(30, 31, 33);
+}
+.logo {
+  font-family: "Kaushan Script", cursive;
+  font-size: 48px;
+  justify-self: center;
+}
+.titles {
+  background-color: black;
+  color: white;
+  font-weight: bold;
+}
+.posters {
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
 .grid-container {
   display: grid;
-  grid-template-columns: repeat(5, auto);
+  grid-template-columns: 20% 20% 20% 20% 20%;
   grid-auto-rows: auto;
   text-align: center;
+  margin: auto;
+  padding: auto;
 }
-
 .box {
-  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  /* padding: 1px; */
+  margin: 2px;
+  border: 2px solid black;
 }
