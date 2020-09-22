@@ -1,15 +1,40 @@
+* {
+  color: white;
+}
 #div1 {
-  height: 323px;
+  height: 340px;
   display: flex;
   justify-content: space-between;
 }
+.dates {
+  width: 200px;
+  text-align: center;
+  justify-content: flex-end;
+  z-index: 5;
+}
+button {
+  border: 1px solid gold;
+  background-color: black;
+  color: red;
+}
 .dropZones {
-  height: 323px;
-  width: 205px;
+  display: flex;
+  flex-direction: column-reverse;
+  height: 340px;
+  width: 202.8px;
   border: 1px solid gold;
 }
 body {
-  background-color: rgb(30, 31, 33);
+  background-color: rgb(5, 5, 5);
+}
+h1,
+h2,
+h3,
+h4 {
+  color: white;
+}
+nav {
+  background-color: black;
 }
 .logo {
   font-family: "Kaushan Script", cursive;
@@ -38,10 +63,12 @@ body {
   width: 182px;
   padding: auto;
   margin: auto;
-  height: 30px;
+  height: 45px;
 }
 .main-gallery {
   width: 100%;
+  margin: auto;
+  padding: auto;
 }
 .gallery-cell {
   margin-left: 20px;
@@ -57,8 +84,9 @@ body {
 .cards {
   display: flex;
   flex-direction: column;
+  flex-wrap: wrap;
   width: 16%;
-  margin: 2px 2px 2px 2px;
-  padding: 2px 2px 2px 2px;
-  /* border: 1px solid gold; */
+  border: 1px solid gold;
+  margin: 1px;
+  background-color: black;
 }

@@ -18,6 +18,33 @@ movies.get("/dropdatabase", (req, res) => {
   res.send("You did it! You dropped the database!");
 });
 
+// // INDEX CAROUSEL
+// movies.get("/", (req, res) => {
+//   Movie.find({}, (error, allMovies) => {
+//     allMovies.sort((a, b) => {
+//       return a.title.toLowerCase() - b.title.toLowerCase();
+//     });
+//     console.log(allMovies);
+//     res.render("movies/index.ejs", {
+//       movies: allMovies,
+//       currentUser: req.session.currentUser,
+//     });
+//   });
+// });
+// INDEX GRID
+movies.get("/", (req, res) => {
+  Movie.find({}, (error, allMovies) => {
+    allMovies.sort((a, b) => {
+      return a.title.toLowerCase() - b.title.toLowerCase();
+    });
+    console.log(allMovies);
+    res.render("movies/index2.ejs", {
+      movies: allMovies,
+      currentUser: req.session.currentUser,
+    });
+  });
+});
+
 // NEW
 movies.get("/new", (req, res) => {
   res.render("movies/new.ejs", { currentUser: req.session.currentUser });
@@ -71,39 +98,10 @@ movies.put("/:id", (req, res) => {
     }
   );
 });
-
 // CREATE
 movies.post("/", (req, res) => {
   Movie.create(req.body, (error, createdMovie) => {
     res.redirect("/movies");
-  });
-});
-
-// INDEX GRID
-movies.get("/", (req, res) => {
-  Movie.find({}, (error, allMovies) => {
-    allMovies.sort((a, b) => {
-      return a.title.toLowerCase() - b.title.toLowerCase();
-    });
-    console.log(allMovies);
-    res.render("movies/index2.ejs", {
-      movies: allMovies,
-      currentUser: req.session.currentUser,
-    });
-  });
-});
-
-// INDEX CAROUSEL
-movies.get("/", (req, res) => {
-  Movie.find({}, (error, allMovies) => {
-    allMovies.sort((a, b) => {
-      return a.title.toLowerCase() - b.title.toLowerCase();
-    });
-    console.log(allMovies);
-    res.render("movies/index.ejs", {
-      movies: allMovies,
-      currentUser: req.session.currentUser,
-    });
   });
 });
 
