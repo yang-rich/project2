@@ -31,6 +31,7 @@ movies.get("/dropdatabase", (req, res) => {
 //     });
 //   });
 // });
+
 // INDEX GRID
 movies.get("/", (req, res) => {
   Movie.find({}, (error, allMovies) => {
@@ -98,6 +99,7 @@ movies.put("/:id", (req, res) => {
     }
   );
 });
+
 // CREATE
 movies.post("/", (req, res) => {
   Movie.create(req.body, (error, createdMovie) => {
@@ -105,7 +107,7 @@ movies.post("/", (req, res) => {
   });
 });
 
-// SEED ROUTE
+// SEED
 movies.get("/setup/seed", (req, res) => {
   Movie.create(
     [

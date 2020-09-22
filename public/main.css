@@ -6,23 +6,12 @@
   display: flex;
   justify-content: space-between;
 }
-.dates {
-  width: 200px;
-  text-align: center;
-  justify-content: flex-end;
-  z-index: 5;
-}
-button {
-  border: 1px solid gold;
-  background-color: black;
-  color: red;
-}
 .dropZones {
   display: flex;
   flex-direction: column-reverse;
   height: 340px;
   width: 202.8px;
-  border: 1px solid gold;
+  border: 1px solid magenta;
 }
 body {
   background-color: rgb(5, 5, 5);
@@ -50,9 +39,6 @@ nav {
 .posters {
   width: 182px;
   margin: auto;
-}
-.datebox {
-  width: 25%;
 }
 .titles {
   background-color: black;
