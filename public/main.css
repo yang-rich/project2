@@ -1,3 +1,13 @@
+#div1 {
+  height: 323px;
+  display: flex;
+  justify-content: space-between;
+}
+.dropZones {
+  height: 323px;
+  width: 205px;
+  border: 1px solid gold;
+}
 body {
   background-color: rgb(30, 31, 33);
 }
@@ -6,28 +16,49 @@ body {
   font-size: 48px;
   justify-self: center;
 }
+.index {
+  color: white;
+}
+.onDeck {
+  display: flex;
+}
+.posters {
+  width: 182px;
+  margin: auto;
+}
+.datebox {
+  width: 25%;
+}
 .titles {
   background-color: black;
   color: white;
   font-weight: bold;
-}
-.posters {
-  margin-bottom: 0;
-  padding-bottom: 0;
-}
-.grid-container {
-  display: grid;
-  grid-template-columns: 20% 20% 20% 20% 20%;
-  grid-auto-rows: auto;
   text-align: center;
-  margin: auto;
+  justify-self: center;
+  width: 182px;
   padding: auto;
+  margin: auto;
+  height: 30px;
 }
-.box {
+.main-gallery {
+  width: 100%;
+}
+.gallery-cell {
+  margin-left: 20px;
+  width: 182px;
+}
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  margin: auto;
+  justify-content: center;
+  text-align: center;
+}
+.cards {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  /* padding: 1px; */
-  margin: 2px;
-  border: 2px solid black;
+  width: 16%;
+  margin: 2px 2px 2px 2px;
+  padding: 2px 2px 2px 2px;
+  /* border: 1px solid gold; */
 }

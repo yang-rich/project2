@@ -74,19 +74,32 @@ movies.put("/:id", (req, res) => {
 
 // CREATE
 movies.post("/", (req, res) => {
-  if (req.body.readyToEat === "on") {
-    req.body.readyToEat = true;
-  } else {
-    req.body.readyToEat = false;
-  }
   Movie.create(req.body, (error, createdMovie) => {
     res.redirect("/movies");
   });
 });
 
-// INDEX
+// INDEX GRID
 movies.get("/", (req, res) => {
   Movie.find({}, (error, allMovies) => {
+    allMovies.sort((a, b) => {
+      return a.title.toLowerCase() - b.title.toLowerCase();
+    });
+    console.log(allMovies);
+    res.render("movies/index2.ejs", {
+      movies: allMovies,
+      currentUser: req.session.currentUser,
+    });
+  });
+});
+
+// INDEX CAROUSEL
+movies.get("/", (req, res) => {
+  Movie.find({}, (error, allMovies) => {
+    allMovies.sort((a, b) => {
+      return a.title.toLowerCase() - b.title.toLowerCase();
+    });
+    console.log(allMovies);
     res.render("movies/index.ejs", {
       movies: allMovies,
       currentUser: req.session.currentUser,

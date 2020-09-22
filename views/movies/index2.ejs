@@ -11,6 +11,7 @@
       <h1>Movies Index Page</h1>
       <h3>Instructions for access:</h3>
       <h4>Make an account at plex.tv. DM me your email that you used to sign up and I will add you to the server and send you a confirmation link. Once you've logged in, click on the plex icon in the top left and my server and there should be a "more" button at the bottom left that will let you see my library</h4>
+      <!-- swim lanes -->
       <h2 class="onDeck">On-Deck Movie Schedule</h2>
       <div id="div1">
         <div class="dropZones droppable" id="dz1"></div> 
@@ -20,10 +21,10 @@
         <div class="dropZones droppable" id="dz5"></div>
       </div>
       <!-- drag drop target area -->
-      <h2>Library</h2><br/>
-      <div class="main-gallery">
+      <h2>Library</h2>
+      <div class="flex-container">
         <% for (let i=0; i < movies.length; i++) { %>
-          <div class="cards gallery-cell" id="<%=[i]%>" draggable="true">
+          <div class="cards" id="<%=[i]%>" draggable="true">
             <a href="/movies/<%=movies[i]._id%>">
               <div class="titles"><%= movies[i].title %></div></br>
               <div class="posters"><img src="<%= movies[i].cover %>"></div></a>
