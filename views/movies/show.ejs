@@ -9,19 +9,19 @@
       <h1><%=movies.title%><br /><br /></h1>
 
       <img src="<%= movies.cover %>" /><br />
-      <h3>
+      <h5>
         <button type="button" name="button">
           <a href="/movies/<%=movies._id%>/edit">Edit</a>
         </button>
-      </h3>
+      </h5>
       <br />
       <h4>Synopsis:</h4>
       <p><%=movies.synopsis%></p>
       <br />
       <form action="/movies/<%=movies._id%>?_method=DELETE" method="POST">
-        <input type="submit" value="DELETE" />
+        <input class="button" type="submit" value="DELETE" />
       </form>
-      <button type="button" name="button">
+      <button class="button" type="button" name="button">
         <a href="/movies">Back</a>
       </button>
     </div>
