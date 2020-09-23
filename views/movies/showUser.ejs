@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <%- include ('../partials/head.ejs') %>
+  </head>
+  <body>
+    <nav><%- include ('../partials/nav.ejs') %></nav>
+    <div class="container">
+      <h1><%=movies.title%><br /><br /></h1>
+
+      <img src="<%= movies.cover %>" /><br />
+      <br />
+      <h4>Synopsis:</h4>
+      <p><%=movies.synopsis%></p>
+      <br />
+      <button class="button" type="button" name="button">
+        <a href="/movies">Back</a>
+      </button>
+    </div>
+  </body>
+</html>

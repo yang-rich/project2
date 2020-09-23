@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Ramajohns Movie App
 
 ## Explanation
@@ -25,3 +26,6 @@ Some unsolved problems that remain include making my drop target areas reject ad
 ## What I Learned
 
 This project introduced me to the beginnings of drag and drop as well as utilizing multiple libraries simultaneously. I quickly realized some functions did not really work on pre-made packages like they would on vanilla javascript. This resulted in me creating an infinitely rotating carousel that did not allow me to utilize drag and drop on it's elements.
+=======
+
+>>>>>>> 672d37cfedfb6214d637d1bf12e7f7329461b386

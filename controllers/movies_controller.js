@@ -69,18 +69,21 @@ movies.delete("/:id", (req, res) => {
   });
 });
 
-// SHOW
+// SHOW USER
 movies.get("/:id", (req, res) => {
-  if (req.session.currentUser) {
-    Movie.findById(req.params.id, (error, foundMovie) => {
+  Movie.findById(req.params.id, (err, foundMovie) => {
+    if (req.session.currentUser.role === "admin") {
       res.render("movies/show.ejs", {
         movies: foundMovie,
         currentUser: req.session.currentUser,
       });
-    });
-  } else {
-    res.redirect("/sessions/new");
-  }
+    } else {
+      res.render("movies/showUser.ejs", {
+        movies: foundMovie,
+        currentUser: req.session.currentUser,
+      });
+    }
+  });
 });
 
 // UPDATE
