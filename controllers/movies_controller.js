@@ -24,7 +24,6 @@ movies.get("/dropdatabase", (req, res) => {
 //     allMovies.sort((a, b) => {
 //       return a.title.toLowerCase() - b.title.toLowerCase();
 //     });
-//     console.log(allMovies);
 //     res.render("movies/index.ejs", {
 //       movies: allMovies,
 //       currentUser: req.session.currentUser,
@@ -71,7 +70,9 @@ movies.delete("/:id", (req, res) => {
 // SHOW USER
 movies.get("/:id", (req, res) => {
   Movie.findById(req.params.id, (err, foundMovie) => {
-    console.log(req.session.currentUser.role);
+    if (req.session.currentUser == undefined) {
+      return res.redirect("/sessions/new");
+    }
     if (req.session.currentUser.role === "admin") {
       res.render("movies/show.ejs", {
         movies: foundMovie,
