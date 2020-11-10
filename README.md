@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-
 # Ramajohns Movie App
 
 ## Explanation
